@@ -9,11 +9,11 @@
 
 ## 3. model
 
-  ## 3.1 Machine Learning
+  ### 3.1 Machine Learning
   - Logistic regression
   - Boosting
   
-  ## 3.2 Deep Learning
+  ### 3.2 Deep Learning
   - biLSTM 
   - biLSTM + self Attention
  
