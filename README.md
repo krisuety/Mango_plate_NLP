@@ -2,6 +2,6 @@
 
 ## 1. crawling
 
-## 2. preprocessin
+## 2. preprocessing
 
 ## 3. model
