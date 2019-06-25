@@ -3,5 +3,6 @@
 ## 1. crawling
 
 ## 2. preprocessing
+- labeling
 
 ## 3. model
