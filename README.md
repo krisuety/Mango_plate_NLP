@@ -17,6 +17,6 @@ requests, selenium
 
 
 ![image](material/result_NLP.png)
-
+(metric : F-1 score)
 
 ## 5. web (Flask)
