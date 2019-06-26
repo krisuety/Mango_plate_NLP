@@ -1,5 +1,8 @@
 # Mango_plate_NLP
 
+
+
+
 ## 1. crawling
 requests, selenium
 
@@ -12,7 +15,7 @@ requests, selenium
 - deep learning
 
 ## 4. predict
--  맛, 웨이팅 best : boosting
+- 가성비, 웨이팅 best : boosting
 - 서비스 best : self attention + biLSTM
 
 
