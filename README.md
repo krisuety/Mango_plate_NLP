@@ -10,3 +10,13 @@ requests, selenium
 ## 3. model
 - machine learning
 - deep learning
+
+## 4. predict
+- boosting(맛, 웨이팅)
+- self attention + biLSTM (서비스)
+
+
+![image](material/result_NLP.png)
+
+
+## 5. web (Flask)
