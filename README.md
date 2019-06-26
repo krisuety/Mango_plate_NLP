@@ -12,8 +12,8 @@ requests, selenium
 - deep learning
 
 ## 4. predict
-- boosting(맛, 웨이팅)
-- self attention + biLSTM (서비스)
+-  맛, 웨이팅 best : boosting
+- 서비스 best : self attention + biLSTM
 
 
 ![image](material/result_NLP.png)
