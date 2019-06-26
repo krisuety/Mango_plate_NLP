@@ -1,0 +1,225 @@
+@charset "utf-8";
+
+* { margin: 0; padding: 0; }
+li{ list-style: none; }
+a{ text-decoration: none; }
+
+
+.header{
+  height: 60px;
+}
+
+.header .logo{
+  width: 110px;
+  margin: 10px 20px 0;
+}
+
+.input_box{
+  height: 250px;
+}
+
+.container{
+  padding-top: 40px;
+  width: 950px;
+  height: 50px;
+  display: inline-block;
+  /* margin: 0 auto; */
+  position: absolute;
+  left: calc((100% - 955px) / 2 - 60px);
+}
+
+.container input#search{
+  margin: 0 auto;
+  width: 950px;
+  height: 50px;
+  background: white;
+  border: 2px solid #FF821A;
+  font-size: 12pt;
+  float: left;
+  outline: none;
+  padding-left: 75px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+}
+
+.container .button{
+  width: 180px;
+  height: 50px;
+  background: #FF821A;
+  border: none;
+  font-size: 15pt;
+  color: white;
+  outline: none;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  position: absolute;
+  margin-left: -180px;
+}
+
+.container .mango{
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 48px;
+  left: 50px;
+}
+
+
+
+
+
+
+.result{
+  height: 1500px;
+  background-color: #F7F8FB;
+  overflow: hidden;
+}
+
+.contents{
+  padding-top: 40px;
+  margin: 0 auto;
+  width: 975px;
+  height: 50px;
+}
+
+.result .box{
+  float: left;
+  margin: 25px 25px 0 0px;
+  width: 300px;
+  height: 300px;
+  padding: 25px;
+  background: white;
+  border-top: 10px solid #FF821A;
+  position: relative;
+  left: 12.5px;"
+  -moz-border-radius: 7px 7px 7px 7px;
+  -webkit-border-radius: 7px 7px 7px 7px;
+}
+
+
+
+/* 식당 이름 */
+.result .box p:nth-child(1) {
+  float: left;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+/* 식당 정보 */
+.result .box p:nth-child(2) {
+  float: right;
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #FF821A;
+}
+
+.result .box p:nth-child(3) {
+  clear: both;
+  font-size: 0.9em;
+  color:grey;
+}
+
+.hline{
+  width: 300px;
+  position: absolute;
+  left: 0px;
+  border-bottom: 0.5px solid lightgrey;
+  opacity: 0.7;
+}
+
+.result .box ul.count {
+  display: block;
+  float: left;
+  line-height: 35px;
+
+}
+
+.result .box .thumbup {
+  width: 15px;
+  position: relative;
+  top: -2px;
+  left: 2px;
+}
+
+.result .box .thumbdown {
+  width: 15px;
+  transform: rotate(180deg);
+  position: relative;
+  left: 1px;
+}
+
+.result .box p.n_review {
+  display: block;
+  float: right;
+  position: relative;
+  top: 120px;
+}
+
+
+
+
+
+
+.ui-autocomplete {
+   position: relative;
+   padding: 4px 0;
+   margin: 0 0 10px 25px;
+   float: left;
+   display: none;
+   min-width: 615px;
+   max-height: 160px;
+   overflow-x: hidden;
+   overflow-y: auto;
+
+
+   list-style: none;
+   background-color: #ffffff;
+   border-color: #ccc;
+   border-color: rgba(0, 0, 0, 0.2);
+   border-style: solid;
+   border-width: 1px;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+   -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+   -webkit-background-clip: padding-box;
+   -moz-background-clip: padding;
+   background-clip: padding-box;
+   *border-right-width: 2px;
+   *border-bottom-width: 2px;
+}
+
+/* 자동완성 메뉴 모양 */
+.ui-menu-item > a.ui-corner-all {
+    display: block;
+    padding: 3px 31px;
+    clear: both;
+    font-weight: normal;
+    line-height: 32px;
+    color: #555555;
+    white-space: nowrap;
+    text-decoration: none;
+
+}
+
+/* 자동완성 선택시 모양 */
+.ui-state-hover, .ui-state-active {
+    color: #ffffff;
+    margin: 0 15px;
+    text-decoration: none;
+    background-color: #0088cc;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    background-image: none;
+}
+
+
+
+
+
+
+/*  */

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>망고플레이트</title>
+   <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='../static/css/style.css')}}">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<body>
+   <div class="header">
+      <img class="logo" src="../static/images/logo.png" alt="logo">
+   </div>
+
+   <div class="input_box">
+      <form autocomplete="off" action="http://15.164.73.63:5000/" formaction="http://15.164.73.63:5000/search" class="container"  method="POST">
+       <div class="container">
+         <span class="icon">
+           <img class="mango m-search" src="../static/images/search.png" alt=""/>
+         </span>
+         <input type="search" id="search" name="get_name" placeholder="식당 이름을 입력하세요" />
+         <input type="submit" class="button" value="검색"/>
+       </div>
+      </form>
+   </div>
+
+
+
+   <div class="result">
+		 <div class="contents">
+      <p>
+        {% if result == [] %}
+          <p> 검색 결과가 없습니다. 다시 검색해주세요. </p>
+        {% else %}
+          {% for value in result %}
+						<div class="box">
+              <!-- 식당 이름 -->
+	            <p>{{ value["name"] }}</p>
+              <!-- 평점 -->
+              <p>{{ value["rating"] }}</p>
+              <!-- 식당 정보 -->
+	            <p>{{ value["info"] }} </br></br></p>
+
+							<div class="hline"></div></br>
+
+              <!-- label -->
+              <ul class="count">
+                <li>
+                  <strong>서비스 &nbsp&nbsp&nbsp</strong>
+                </li>
+                <li>
+                  <strong>가성비 &nbsp&nbsp&nbsp</strong>
+                </li>
+                <li>
+                  <strong>웨이팅 &nbsp&nbsp&nbsp</strong>
+                </li>
+              </ul>
+              <!-- like -->
+              <ul class="count">
+                <li>
+                  <img class="thumbup" src="../static/images/thumb.png" >
+                  {{ value["svc_g"] }} &nbsp
+                </li>
+                <li>
+                  <img class="thumbup" src="../static/images/thumb.png" >
+                  {{ value["rsb_g"] }} &nbsp
+                </li>
+                <li style="position: relative; top: 2.5px;">
+                  &nbsp{{ value["wait"] }}
+                </li>
+              </ul>
+              <!-- dislike -->
+              <ul class="count">
+                <li>
+                  <img class="thumbdown"src="../static/images/thumb.png" >
+                  {{ value["svc_b"] }}
+                </li>
+                <li>
+                  <img class="thumbdown"src="../static/images/thumb.png" >
+                  {{ value["rsb_b"] }}
+                </li>
+                <li> </li>
+              </ul>
+
+              <!-- 리뷰 수 -->
+              <p class="n_review">
+                {{ value["n_review"] }} 리뷰
+              </p>
+
+						</div>
+          {% endfor %}
+        {% endif %}
+      </p>
+
+   </div>
+
+
+
+    <script type="text/javascript">
+
+    $(document).ready(function(){
+
+        $.ajax({
+            url: '{{ url_for("autocomplete") }}',
+            // contentType: 'application/json',
+            method: "POST",
+            // dataType : 'json',
+            // data: JSON.stringify({variable:keypath})
+        }).done(function (data) {
+
+            console.log(data.matching_results) // 개발자도구 console => 넘어온 데이터 확인
+
+            $("#search").autocomplete({
+                source: data.matching_results,
+                minLength: 1,
+                select: function(event, ui) {
+                    $('#search').val(ui.item.name);
+                    //return false
+                    console.log(ui.item.value)
+                },
+                focus: function(event, ui) {
+                    $('#search').val(ui.item.name);
+
+                    //event.preventDefault();
+                    //$(this).val(ui.item.name);
+                    //return false;
+                },
+                position: {
+                    my: "left top",
+                    at: "left bottom"
+                },
+                appendTo: '.container',
+
+            })
+
+        });
+    });
+
+
+    </script>
+
+
+
+
+
+
+
+
+</body>
+</html>
