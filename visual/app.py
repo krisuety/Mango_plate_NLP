@@ -13,7 +13,6 @@ def input():
    if request.method == 'POST':
       keyword = request.form["get_name"]
       result = list(filter(lambda x: keyword in x['name'] , sample))
-      # []
       print(result)
       return render_template("index.html", result = result)
    else:
@@ -23,7 +22,6 @@ def input():
 def autocomplete():
 
    results = list(map(lambda x: x['name'], sample))
-   # ["한신포차", "한신포차 (종로관철점)", "한신포차 (논현본점)", "경성포차", "백억포차"]
    return jsonify(matching_results=results)
 
 
