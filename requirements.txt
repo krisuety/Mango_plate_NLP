@@ -2,3 +2,4 @@ selenium
 beautifulsoup4
 PyMySQL
 torch
+scikit-learn==0.20.0
