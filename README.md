@@ -26,4 +26,6 @@
 ![image](material/result_NLP.png)
 (metric : F-1 score)
 
-## 5. web (Flask)
+## 5. web (Flask, nginx, uWSGI)
+
+[식당 조회해보기](15.164.204.219)
