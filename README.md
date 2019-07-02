@@ -19,8 +19,8 @@
 
 ## 4. predict
 
-- 가성비, 웨이팅 best : boosting
-- 서비스 best : self attention + biLSTM
+- 가성비, 웨이팅 best : boosting (lgbm)
+- 서비스 best : self attention + biLSTM (pytorch)
 
 
 ![image](material/result_NLP.png)
